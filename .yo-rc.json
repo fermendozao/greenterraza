@@ -1,0 +1,22 @@
+{
+  "generator-fountain-react": {
+    "version": "0.6.0",
+    "props": {
+      "framework": "react",
+      "modules": "webpack",
+      "js": "babel",
+      "css": "scss",
+      "resolved": "/Users/vincoorbis/.nvm/versions/v6.2.1/lib/node_modules/generator-fountain-webapp/node_modules/generator-fountain-react/generators/app/index.js",
+      "namespace": "fountain-react",
+      "argv": {
+        "remain": [],
+        "cooked": [],
+        "original": []
+      },
+      "skip-cache": false,
+      "skip-install": false,
+      "sample": "techs",
+      "router": "router"
+    }
+  }
+}
