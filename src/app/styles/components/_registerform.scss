@@ -1,0 +1,100 @@
+$highlight-text: $color-piction-blue;
+.registerForm {
+  padding: 0 30px;
+
+  a {
+    color: $color-blue;
+  }
+
+  h4 {
+    color:  $highlight-text;
+  }
+
+  legend {
+    padding: 10px 0 5px 0;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    font-weight: 500;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 0 0 18px 0;
+  }
+
+  .form-group {
+    padding: 0;
+
+    .control-label { display: none; }
+  }
+
+  &--success {
+    padding: 20px;
+    span {
+     color: $brand-success;
+     font-size: 100px;
+    }
+  }
+
+  .react-datepicker__input-container { width: 100%; }
+
+  .btn {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .rms-wrapper {
+    margin: 0;
+
+    &::before {
+      color: $color-rolling-stone;
+    }
+  }
+
+  .rms-text {
+    border: 1px solid $color-silver;
+    span {
+      color: $color-silver-chalice;
+      font-size: 15px;
+      font-style: normal;
+    }
+  }
+
+  .form-group-select {
+    position: relative;
+    margin: 0 -15px 15px;
+    padding: 0;
+
+    select { -webkit-appearance: none; }
+
+    &::before {
+      font-family: 'FontAwesome';
+      font-size: 35px;
+      content: '\F107';
+      position: absolute;
+      right: 9px;
+      top: -5px;
+      color: $color-rolling-stone;
+    }
+  }
+
+  .has-feedback label ~ .form-control-feedback {
+    top: 1px;
+  }
+}
+
+.hasError {
+  padding: 20px 0 40px;
+  p {
+    color: $highlight-text;
+    padding-top: 0;
+    margin: 0;
+  }
+}
+.privacy-policy {
+  margin: 9px 0;
+  display: inline-block;
+}

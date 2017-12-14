@@ -1,0 +1,120 @@
+// Cheers to http://callmenick.com/post/animating-css-only-hamburger-menu-icons
+
+// Local vars
+$bar-thickness: 4px;                                    // The thickness of the button bars
+$border-radius: 1px;                                    // Corners with nice edges
+$button-bar-space: 12px;                                // The spacing between button bars
+$button-dimensions: 30px;                               // The dimension of the button area
+$button-pad: 0;                                         // The left/right padding between button area and bars.
+$button-transition-duration: .3s;                       // The transition duration
+$color-hamburguer-button: $color-green-haze;            // Color of the stripes
+$top-bottom: ($button-dimensions - $bar-thickness) / 2; // This center the middle bar
+$bar-space: floor(($top-bottom / 2) * -1);              // Distance between bars (This var is down here, because there is not hoisting in SASS)
+
+.c-hamburger {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+  height: $button-dimensions;
+  margin: 0 18px 0 11px;
+  padding: 0;
+  position: relative;
+  text-indent: -9999px;
+  transition: background $button-transition-duration;
+  vertical-align: middle;
+  width: $button-dimensions;
+
+  &:focus {
+    outline: none;
+  }
+
+  p {
+    color: white;
+    text-indent: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 28px;
+    font-weight: 600;
+    margin-left: -3px;
+  }
+
+  span {
+    background: $color-hamburguer-button;
+    border-radius: $border-radius;
+    display: block;
+    height: $bar-thickness;
+    left: $button-pad;
+    position: absolute;
+    right: $button-pad;
+    top: $top-bottom;
+
+    &::after,
+    &::before {
+      background-color: $color-hamburguer-button;
+      content: '';
+      display: block;
+      height: $bar-thickness;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &::after {
+      bottom: $bar-space;
+    }
+
+    &::before {
+      top: $bar-space;
+    }
+  }
+}
+
+.c-hamburger--htx {
+  span {
+    transition: background 0s $button-transition-duration;
+
+    &::after,
+    &::before {
+      border-radius: $border-radius;
+      transition: {
+        delay: $button-transition-duration, 0s;
+        duration: $button-transition-duration, $button-transition-duration;
+      }
+    }
+
+    &::after {
+      transition-property: bottom, transform;
+    }
+
+    &::before {
+      transition-property: top, transform;
+    }
+  }
+
+  // active state, i.e. menu open
+  &.is-active {
+    span {
+      background: none;
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after,
+      &::before {
+        transition-delay: 0s, $button-transition-duration;
+      }
+    }
+  }
+}

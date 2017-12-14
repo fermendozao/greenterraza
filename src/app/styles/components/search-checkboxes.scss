@@ -1,0 +1,16 @@
+.search-checkboxes {
+  .checkbox-inline {
+    padding-top: 62px;
+    margin-bottom: 20px;
+
+    .med-icon {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-55%);
+
+      height: 35px;
+      width: 35px;
+    }
+  }
+}

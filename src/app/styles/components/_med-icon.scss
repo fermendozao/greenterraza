@@ -1,0 +1,42 @@
+.med-icon {
+  background: {
+    image: url('../img/medicons-sprite.png');
+    repeat: no-repeat;
+    size: 900%;
+  }
+  display: inline-block;
+  height: inherit;
+  width: inherit;
+
+  &--aplicaciones {
+    background: {
+      position: {
+        x: 12%;
+      }
+    }
+  }
+
+  &--audio {
+    background: {
+      position: {
+        x: 25%;
+      }
+    }
+  }
+
+  &--documento {
+    background: {
+      position: {
+        x: 37%;
+      }
+    }
+  }
+
+  &--video {
+    background: {
+      position: {
+        x: 50%;
+      }
+    }
+  }
+}

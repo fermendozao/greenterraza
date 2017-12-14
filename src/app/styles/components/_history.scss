@@ -1,0 +1,14 @@
+.historyElemnt {
+  color: $color-dove-gray;
+  font-size: 15px;
+  padding: 15px 5px;
+
+  &:nth-child(odd) {
+    background-color: $color-white-ice;
+  }
+
+  .verb {
+    text-transform: uppercase;
+    color: $color-mine-shaft;
+  }
+}

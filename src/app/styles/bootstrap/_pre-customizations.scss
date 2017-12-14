@@ -1,0 +1,170 @@
+// Color Palette
+// - A
+$color-alto: #dfdfdf;
+$color-amaranth: #d81b60;
+$color-athens-gray: #f2f4f6;
+// - B
+$color-bahama-blue: #01579b;
+$color-black: #000;
+$color-blue: #1C33FF;
+$color-boulder: #777;
+// - C
+$color-cape-cod: #393c3e;
+$color-caribbean-green: #00CC99;
+$color-cerulean: #03a9f4;
+$color-curious-blue: #1d98db;
+// -D
+$color-dove-gray: #616161;
+$color-dusty-gray: #999999;
+// -E
+$color-eminence: #65318f;
+$color-emperor: #545454;
+// -F
+$color-fun-blue: #175aa7;
+//- G
+$color-gallery: #eaeaea;
+$color-green-haze: #009966;
+// - H
+$color-havelock-blue: #4d92df;
+// - I
+$color-iron: #d6d7d8;
+// - M
+$color-mariner: #317fd6;
+$color-mercury: #e4e4e4;
+$color-mine-shaft: #232323;
+// - O
+$color-outer-space: #263238;
+// -P
+$color-piction-blue: #389AEE;
+// - R
+$color-robin-eggblue: #00bcd4;
+$color-rolling-stone: #6f7477;
+$color-royal-blue: #2e85ea;
+$color-royal-purple: #7b47a4;
+// - S
+$color-silver: #ccc;
+$color-silver-chalice: #adadad;
+$color-studio: #834CB4;
+$color-supernova: #fccb00;
+$color-sushi: #8bc34a;
+// - T
+$color-tundora: #4d4d4d;
+// - W
+$color-white: #fff;
+$color-white-e: #fefefe; //This color doesn't have a name
+$color-white-ice: #e1faf4;
+$color-wildsand: #f6f6f6;
+
+//== Colors
+//
+$brand-primary:         $color-caribbean-green !default;
+$brand-secondary:       $color-royal-blue !default;
+$brand-success:         $color-sushi !default;
+$brand-info:            $color-studio !default;
+
+//** Global text color on `<body>`.
+$text-color:            $color-dove-gray !default;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans: 'Open Sans', sans-serif !default;
+$font-family-serif: 'Helvetica', sans-serif !default;
+$font-family-base: $font-family-sans !default;
+
+$font-size-base:          15px !default;
+$font-size-large:         20px !default;
+
+// == Container sizes
+// Large screen / wide desktop
+$container-xl-desktop: 1446px !default;
+
+//** Global text color on `<body>`.
+$text-color: $color-outer-space !default;
+
+//== Grid system
+//
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$border-radius-base:        0 !default;
+$border-radius-large:       0 !default;
+$padding-base-vertical:     8px !default;
+
+//== Navbar
+//
+//##
+$navbar-margin-bottom:             0 !default;
+$navbar-padding-vertical:          40px !default;
+$navbar-default-color:             $color-white !default;
+$navbar-default-bg:                transparent!default;
+
+// Navbar links
+$navbar-default-link-color:                $color-white !default;
+$navbar-default-link-hover-color:          green !default;
+$navbar-default-link-hover-bg:             transparent !default;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-primary-border:             $brand-secondary;
+$btn-primary-bg:                 $brand-secondary;
+
+$btn-default-color:              $color-white !default;
+$btn-default-bg:                 $brand-primary !default;
+$btn-default-border:             $brand-primary !default;
+
+$btn-info-color:                 $color-white !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $brand-info !default;
+
+//== Modals
+//
+
+//** Padding applied to the modal body
+$modal-inner-padding:         0 !default;
+$modal-md:                    582px !default;
+
+//** Modal backdrop background color
+$modal-backdrop-bg:           $color-studio !default;
+//** Modal header border color
+$modal-header-border-color:   transparent !default;
+//** Modal footer border color
+$modal-footer-border-color:   $modal-header-border-color !default;
+
+//== Popovers
+//
+//##
+
+//** Popover body background color
+$popover-bg:                          #fff !default;
+//** Popover maximum width
+$popover-max-width:                   276px !default;
+//** Popover border color
+$popover-border-color:                transparent !default;
+//** Popover fallback border color
+$popover-fallback-border-color:       transparent !default;
+
+//** Popover title background color
+$popover-title-bg:                    darken($popover-bg, 3%) !default;
+
+//** Popover arrow width
+$popover-arrow-width:                 10px !default;
+//** Popover arrow color
+$popover-arrow-color:                 $popover-bg !default;
+
+//** Popover outer arrow width
+$popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
+//** Popover outer arrow color
+$popover-arrow-outer-color:           fade_in($popover-border-color, 0.05) !default;
+//** Popover outer arrow fallback color
+$popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%) !default;

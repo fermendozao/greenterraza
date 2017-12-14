@@ -1,0 +1,35 @@
+$a-tags: 'a, a:active, a:hover, a:visited';
+$icon-size: 20px;
+
+.breadcrumbs {
+  font-weight: 300;
+  font-style: italic;
+
+  #{$a-tags} {
+    color: $color-dove-gray;
+  }
+
+  .crumb:only-child,
+  .crumb > a {
+    position: relative;
+    &:before {
+      content: '';
+      background: {
+        image: url('../../img/medicons-sprite.png');
+        position-x: 100%;
+        repeat: no-repeat;
+        size: 900%;
+      }
+      display: inline-block;
+      height: $icon-size;
+      margin: 20px 10px 20px 0;
+      text-indent: 25px;
+      vertical-align: middle;
+      width: $icon-size;
+    }
+  }
+
+  .crumb:only-child {
+    display: none;
+  }
+}

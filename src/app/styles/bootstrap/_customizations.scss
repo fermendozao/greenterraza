@@ -1,0 +1,6 @@
+//
+.navbar-inverse .navbar-toggle {
+  &:hover .icon-bar {
+    background-color: $color-boulder;
+  }
+}

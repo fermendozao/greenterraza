@@ -1,0 +1,112 @@
+.searchform {
+  a:hover {
+    text-decoration: none;
+  }
+
+  input {
+    color: $brand-secondary;
+
+    &::-webkit-input-placeholder {
+       font-size: 0.85em;
+    }
+
+    &:-moz-placeholder {
+       font-size: 0.85em;
+    }
+
+    &::-moz-placeholder {
+       font-size: 0.85em;
+    }
+
+    &:-ms-input-placeholder {
+       font-size: 0.85em;
+    }
+  }
+
+  &_advanced {
+    background-color: $color-white;
+    padding: 15px 0 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    &--arrow {
+      position: absolute;
+      right: 47%;
+      top: -48px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-top-width: 0;
+        border-color: transparent;
+        border-bottom-color: $color-white;
+        border-width: 24px;
+      }
+    }
+  }
+
+  .search,
+  .search-advanced {
+    &::after {
+      background: {
+        image: url('../../img/medicons-sprite.png');
+        repeat: no-repeat;
+        size: 900%;
+      }
+      border-radius: 5px;
+      content: '';
+      height: 30px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+    }
+  }
+
+  .search::after {
+    background: {
+      position: {
+        x: 75%;
+      }
+    }
+  }
+
+  .search-advanced::after {
+    background: {
+      position: {
+        x: 88%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-min) {
+    .input-group-btn {
+      padding-top: 15px;
+      text-align: center;
+    }
+  }
+
+  &_advanced--arrow {
+    @media screen and (min-width: $screen-sm-min) {
+      right: 10.5%;
+    }
+
+    @media screen and (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+      right: 12.5%;
+    }
+
+    @media screen and (min-width: $screen-xl-min) {
+      right: 8.5%;
+    }
+  }
+}
