@@ -41,21 +41,11 @@ a {
 @import 'bootstrap/grid';
 @import 'bootstrap/override';
 
-@import 'components/rms-select';
-@import 'components/med-icon';
-@import 'components/med';
-@import 'components/med-comments';
-@import 'components/hamburger-button';
+
 @import 'components/header';
 @import 'components/footer';
-@import 'components/loginform';
-@import 'components/sidebar';
-@import 'components/history';
-@import 'components/searchform';
-@import 'components/registerform';
-@import 'components/walkthrough';
-@import 'components/search-checkboxes';
-@import 'components/starRating';
-@import 'components/breadcrumbs';
 
 @import 'components/hero';
+@import 'components/gallery';
+@import 'components/home-section';
+@import 'components/events-item';

@@ -1,0 +1,15 @@
+.events-item {
+  text-align: center;
+  font-size: 85%;
+  margin-bottom: 30px;
+
+  >.title {
+    margin: 25px 0;
+  }
+
+  >.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

@@ -3,21 +3,10 @@ import 'babel-polyfill';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Main} from './app/main';
+import Events from './app/components/Events';
 import {Footer} from './app/components/layout/Footer';
 import {Header} from './app/components/layout/Header';
 
-
-import {Search} from './app/search/Search';
-import {Sidebar} from './app/sidebar/sidebar';
-import {Profile} from './app/profile/profile';
-import {MedDetails} from './app/meds/MedDetails';
-import {MedVideo} from './app/meds/MedVideo';
-import {SearchForm} from './app/search/searchForm';
-import {SearchBreadcrumb} from './app/search/SearchBreadcrumb';
-import {Walkthrough} from './app/components/walkthrough/walkthrough';
-import {Accessibility} from './app/components/accessibility/accessibility';
-import {Privacy} from './app/components/privacy/privacy';
-import userStore from './app/user';
 import resourcesStore from './app/search/searchAdvanced/SearchAdvancedResources';
 import sidebarResourcesStore from './app/sidebar/sidebarResources';
 
@@ -89,15 +78,8 @@ ReactDOM.render(
   <Router history={appHistory}>
     <Route path="/" name="Recursos educativos" component={App}>
       <IndexRoute component={Main}/>
-      <Route path="recurso/:med_id" name="Recurso" staticName={true} component={MedDetails}/>
-      <Route path="s" name="Resultados de búsqueda" component={Search}/>
-      <Route path="sn" name="Estos son los recursos más nuevos" component={Search}/>
-      <Route path="recursos-populares" name="Estos son los recursos más populares en el último mes" component={Search}/>
-      <Route path="accesibilidad" name="Accesibilidad" component={Accessibility}/>
-      <Route path="politica-privacidad" name="Política de Privacidad" component={Privacy}/>
-      <Route path="perfil" name="Perfil" component={Profile}/>
+      <Route path="eventos" name="Eventos" component={Events}/>
     </Route>
-    <Route path="recurso/:med_id/video" component={MedVideo}/>
   </Router>
   ),
   document.getElementById('root')

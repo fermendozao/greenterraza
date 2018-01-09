@@ -1,0 +1,21 @@
+.home-section {
+  padding: 65px 30px 100px;
+  text-align: center;
+  position: relative;
+
+  >.title {
+    font-weight: light;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background: url('../../../assets/img/divider.png');
+  }
+
+}
