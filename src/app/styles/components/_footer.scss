@@ -1,5 +1,4 @@
 footer {
-  margin-top: 60px;
   background-color: $color-cape-cod;
   color: $color-iron;
   font-size: .9em;
@@ -9,5 +8,28 @@ footer {
     margin-bottom: 40px;
     text-align: center;
     width: 100%;
+  }
+
+  .title, .fa, a {
+    color: $color-cyan;
+  }
+
+  .fa-ul {
+    margin-left: 0;
+    list-style-position: outside;
+
+    li {
+      left: 20px;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: solid 2px $color-cyan;
+    padding-bottom: 2px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }

@@ -15,6 +15,11 @@
   &-title {
     font-size: 2em;
   }
+  &-body {
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .nav-tabs {
@@ -31,6 +36,14 @@
       color: $color-white;
     }
   }
+}
+
+.navbar-default .navbar-nav {
+   >li {
+     >a:hover {
+     color: $color-cyan;
+     }
+   }
 }
 
 hr {
@@ -58,28 +71,4 @@ hr {
 
 .modal-xl .modal-dialog {
   width: 90%;
-}
-
-// Modal section close button
-.modal-header {
-  // Local vars
-  $icon-size: 30px;
-
-  .close {
-    span {
-      background: {
-        image: url('../../img/medicons-sprite.png');
-        position: {
-          x: 63%;
-        }
-        repeat: no-repeat;
-        size: 900%;
-      }
-      color: transparent;
-      display: block;
-      height: $icon-size;
-      text-indent: -99999999px;
-      width: $icon-size;
-    }
-  }
 }
