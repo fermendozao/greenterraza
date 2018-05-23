@@ -10,17 +10,61 @@
   >.description {
     background-color: rgba(0,0,0, .6);
     position: absolute;
-    bottom: -85px;
+    bottom: -200%;
     width: 100%;
     color: white;
     text-align: center;
     padding: 10px 5px;
     transition: all .3s ease;
+
+    >.title {
+      @media (max-width: 768px) {
+        font-size: 15px;
+        margin-top: 0;
+      }
+    }
+
+    >.description {
+      color: $color-monte-carlo;
+    }
+
+    >.fa-ul {
+      margin-left: 0;
+      position: relative;
+      bottom: -19px;
+
+      li {
+        display: inline-block;
+        padding: 5px;
+
+        i{
+          display: block;
+          color: $color-monte-carlo;
+        }
+      }
+    }
   }
 
   &:hover {
     >.description {
       bottom: 15px;
     }
+  }
+}
+
+.carousel_gallery {
+  margin-bottom: 50px;
+
+  .carousel-indicators {
+    bottom: -25px;
+
+    li {
+      background-color: #e0f2f1;
+
+      &.active {
+        background-color: #b2dfdb;
+      }
+    }
+
   }
 }

@@ -2,26 +2,21 @@ import React, {Component} from 'react';
 import {Hero} from './components/Hero';
 import {Grid, Row, Col} from 'react-bootstrap';
 
+import {GMap} from './components/Map/Map';
+import {CarouselGallery} from './components/CarouselGallery/CarouselGallery';
+import {carouselItems} from '../constants';
+
 export class Main extends Component {
   render() {
     return (
       <div>
         <Grid fluid>
           <Row>
-            <div className="hero-container">
-              <h1 className="text-center title">
-                <small>Estamos contigo</small>
-                en el día más feliz de tu vida
-              </h1>
-
-              <p className="text-center">
-                <button className="btn btn-default">Realizar Pedido</button>
-              </p>
-            </div>
+            <Hero/>
           </Row>
         </Grid>
 
-        <Grid>
+        <Grid fluid>
           <Row>
             <Col xs={12}>
               <div className="home-section">
@@ -35,67 +30,22 @@ export class Main extends Component {
           </Row>
 
           <Row>
-            <Col xs={4}>
-              <div className="gallery-element">
-                <img className="image" src="../assets/img/flor1.jpg"/>
-                <div className="description">
-                  <h3>Sueño de invierno</h3>
-                  <span>Ramo Pomander</span>
-                </div>
-              </div>
-            </Col>
+            <CarouselGallery items={carouselItems}/>
+          </Row>
 
-            <Col xs={4}>
-              <div className="gallery-element">
-                <img className="image" src="../assets/img/flor2.jpg"/>
-                <div className="description">
-                  <h3>Sueño de invierno</h3>
-                  <span>Ramo Pomander</span>
-                </div>
-              </div>
-            </Col>
-
-            <Col xs={4}>
-              <div className="gallery-element">
-                <img className="image" src="../assets/img/flor3.jpg"/>
-                <div className="description">
-                  <h3>Sueño de invierno</h3>
-                  <span>Ramo Pomander</span>
-                </div>
-              </div>
-            </Col>
-
-            <Col xs={4}>
-              <div className="gallery-element">
-                <img className="image" src="../assets/img/flor4.jpg"/>
-                <div className="description">
-                  <h3>Sueño de invierno</h3>
-                  <span>Ramo Pomander</span>
-                </div>
-              </div>
-            </Col>
-
-            <Col xs={4}>
-              <div className="gallery-element">
-                <img className="image" src="../assets/img/flor5.jpg"/>
-                <div className="description">
-                  <h3>Sueño de invierno</h3>
-                  <span>Ramo Pomander</span>
-                </div>
-              </div>
-            </Col>
-
-            <Col xs={4}>
-              <div className="gallery-element">
-                <img className="image" src="../assets/img/bouquet.jpg"/>
-                <div className="description">
-                  <h3>Sueño de invierno</h3>
-                  <span>Ramo Pomander</span>
-                </div>
+          <Row>
+            <Col>
+              <div className="home-section -image">
+                <h1 className="description">Trato personal</h1>
+                <p>Trabajamos contigo para crearte un estilo propio adaptado a
+                  tus gustos, necesidades y por supuesto acorde a tu presupuesto
+                  respetando tu propio estilo y gusto, tambien contamos con
+                  asesoramiento para llegar a lo que haz soñado para ese día tan
+                  especial.
+                </p>
               </div>
             </Col>
           </Row>
-
           <Row>
             <Col xs={12}>
               <div className="home-section">
@@ -104,9 +54,8 @@ export class Main extends Component {
               </div>
             </Col>
           </Row>
-
           <Row>
-            <Col xs={3}>
+            <Col xs={12} md={3}>
               <div className="events-item">
                 <img src="../assets/img/icons/ic_zapatos.jpg"/>
                 <h4 className="title">Quince Años</h4>
@@ -118,7 +67,7 @@ export class Main extends Component {
               </div>
             </Col>
 
-            <Col xs={3}>
+            <Col xs={12} md={3}>
               <div className="events-item">
                 <img src="../assets/img/icons/ic_sonaja.jpg"/>
                 <h4 className="title">Bautizos y Baby Shower</h4>
@@ -129,8 +78,8 @@ export class Main extends Component {
               </div>
             </Col>
 
-            <Col xs={3}>
-              <div className="events-item"> 
+            <Col xs={12} md={3}>
+              <div className="events-item">
                 <img src="../assets/img/icons/ic_anillos.jpg"/>
                 <h4 className="title">Bodas</h4>
                 <ul className="list">
@@ -141,8 +90,7 @@ export class Main extends Component {
                 </ul>
               </div>
             </Col>
-
-            <Col xs={3}>
+            <Col xs={12} md={3}>
               <div className="events-item">
                 <img src="../assets/img/icons/ic_copas.jpg"/>
                 <h4 className="title">Eventos Corporativos</h4>
@@ -153,6 +101,16 @@ export class Main extends Component {
                   <li>Decoración para Inauguración</li>
                   <li>Reuniones</li>
                 </ul>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="map">
+                <GMap
+                  lat={59.955413}
+                  lng={30.337844}
+                  />
               </div>
             </Col>
           </Row>
