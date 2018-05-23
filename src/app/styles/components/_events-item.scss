@@ -1,3 +1,20 @@
+.events {
+  min-height: calc(100vh - 294px);
+
+  @media (max-width: 768px) {
+    min-height: calc(100vh - 437px);
+  }
+
+  .breadcrumb {
+    color: $color-cerulean;
+    span {
+      &:before {
+        content: '/'
+      }
+    }
+  }
+}
+
 .events-item {
   text-align: center;
   font-size: 85%;

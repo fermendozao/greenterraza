@@ -4,6 +4,7 @@ import {Grid, Row, Col} from 'react-bootstrap';
 
 import {GMap} from './components/Map/Map';
 import {CarouselGallery} from './components/CarouselGallery/CarouselGallery';
+import {carouselItems} from '../constants';
 
 export class Main extends Component {
   render() {
@@ -29,13 +30,13 @@ export class Main extends Component {
           </Row>
 
           <Row>
-            <CarouselGallery/>
+            <CarouselGallery items={carouselItems}/>
           </Row>
 
           <Row>
             <Col>
               <div className="home-section -image">
-                <h1>Trato personal</h1>
+                <h1 className="description">Trato personal</h1>
                 <p>Trabajamos contigo para crearte un estilo propio adaptado a
                   tus gustos, necesidades y por supuesto acorde a tu presupuesto
                   respetando tu propio estilo y gusto, tambien contamos con
